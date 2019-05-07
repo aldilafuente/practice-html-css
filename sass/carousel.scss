@@ -1,0 +1,154 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* MIXINS Y VARIABLES DE SASS */
+
+@mixin flex ($flex, $justify, $align){
+  display: $flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin size ($width, $height){
+  width: $width;
+  height: $height;
+}
+
+@mixin fontSize ($size) {
+  font-size: $size;
+}
+
+$colorBlue: #229cdb;
+$colorWhite: #fff;
+
+/* FIN DE VARIABLES DE SASS */
+
+
+.main-container {
+  @include size(100%, 100%);
+  @include flex(flex, center, center);
+  flex-direction: column;
+  background-color: #dbdbdb;
+
+  .title {
+    @include fontSize(45px);
+    font-family: 'Grand Hotel', cursive;
+  }
+}
+
+.carousel-out {
+  @include size(80%, auto);
+  overflow: hidden;
+  background-color: $colorWhite;
+
+  .carousel-in {
+    @include size(120%, auto);
+    display: flex;
+  }
+}
+
+.product {
+  @include flex(flex, center, none);
+  flex-direction: column;
+  margin: 8px;
+  border: 1px solid #e7e7e7;
+  font-family: 'Open Sans', sans-serif;
+  
+  .price {
+    @include fontSize(20px);
+    text-align: center;
+    color: $colorBlue;
+    margin-top: 7px;
+    word-spacing: -3px;
+
+    .cents {
+      @include fontSize(11px);
+      text-decoration: underline;
+      vertical-align: top;
+    }
+  }
+
+  .offer {
+    text-align: center;
+    
+    .old-price {
+      @include fontSize(12px);
+      text-decoration: line-through;
+      color: #a6a6a6;
+    }
+  
+    .discount {
+      @include fontSize(14px);
+      color: #78bc65;
+    }
+  }
+}
+
+.image {
+  position: relative;
+  width: 240px;
+  margin: 8px;
+
+  img {
+    width: 100%;
+  }
+
+  .icon-truck {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: $colorWhite;
+    border-radius: 50%;
+    
+    i {
+      transform: scaleX(-1);
+      @include fontSize(12px);
+      padding: 10px;
+      color: rgb(5, 168, 5);
+    }
+  }
+
+  .icon-like {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: $colorWhite;
+    border-radius: 50%;
+
+    i {
+      @include fontSize(12px);
+      padding: 10px;
+      color: $colorBlue;
+    }
+  }
+
+  .icon-arrow {
+    i {
+      position: absolute;
+      bottom: 35px;
+      left: 3px;
+      @include fontSize(13px);
+      color: #bed4e4;
+    }
+  }
+}
+
+.box2, .box3, .box4, .box5 {
+  .description {
+    margin-top: 25px;
+  }
+}
+
+.description {
+  @include fontSize(12px);
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.stars {
+  @include fontSize(16px);
+  margin: 0 0 10px 5px;
+  color: $colorBlue;
+}

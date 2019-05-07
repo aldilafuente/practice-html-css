@@ -1,0 +1,125 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* MIXINS Y VARIABLES DE SASS */
+/* FIN DE VARIABLES DE SASS */
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #dbdbdb;
+}
+.main-container .title {
+  font-size: 45px;
+  font-family: "Grand Hotel", cursive;
+}
+
+.carousel-out {
+  width: 80%;
+  height: auto;
+  overflow: hidden;
+  background-color: #fff;
+}
+.carousel-out .carousel-in {
+  width: 120%;
+  height: auto;
+  display: flex;
+}
+
+.product {
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  flex-direction: column;
+  margin: 8px;
+  border: 1px solid #e7e7e7;
+  font-family: "Open Sans", sans-serif;
+}
+.product .price {
+  font-size: 20px;
+  text-align: center;
+  color: #229cdb;
+  margin-top: 7px;
+  word-spacing: -3px;
+}
+.product .price .cents {
+  font-size: 11px;
+  text-decoration: underline;
+  vertical-align: top;
+}
+.product .offer {
+  text-align: center;
+}
+.product .offer .old-price {
+  font-size: 12px;
+  text-decoration: line-through;
+  color: #a6a6a6;
+}
+.product .offer .discount {
+  font-size: 14px;
+  color: #78bc65;
+}
+
+.image {
+  position: relative;
+  width: 240px;
+  margin: 8px;
+}
+.image img {
+  width: 100%;
+}
+.image .icon-truck {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.image .icon-truck i {
+  transform: scaleX(-1);
+  font-size: 12px;
+  padding: 10px;
+  color: #05a805;
+}
+.image .icon-like {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.image .icon-like i {
+  font-size: 12px;
+  padding: 10px;
+  color: #229cdb;
+}
+.image .icon-arrow i {
+  position: absolute;
+  bottom: 35px;
+  left: 3px;
+  font-size: 13px;
+  color: #bed4e4;
+}
+
+.box2 .description, .box3 .description, .box4 .description, .box5 .description {
+  margin-top: 25px;
+}
+
+.description {
+  font-size: 12px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.stars {
+  font-size: 16px;
+  margin: 0 0 10px 5px;
+  color: #229cdb;
+}
+
+/*# sourceMappingURL=carousel.css.map */
